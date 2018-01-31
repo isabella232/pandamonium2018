@@ -3,16 +3,15 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   BlockQuote,
-  Cite,
   Deck,
   Heading,
-  ListItem,
-  List,
   Quote,
   Slide,
   Text,
-  Image
+  Image,
+  Notes
 } from "spectacle";
 
 // Import theme
@@ -27,7 +26,12 @@ const images = {
   structure: require("../assets/design-system-structure.png"),
   buttons: require("../assets/buttons.jpg"),
   centralized: require("../assets/centralized.png"),
-  federated: require("../assets/federated.png")
+  federated: require("../assets/federated.png"),
+  stools: require("../assets/three-legged-stool.jpg"),
+  wobble: require("../assets/wobbly-stool.jpg"),
+  radar: require("../assets/tech-radar.png"),
+  team: require("../assets/uidev-team.png"),
+  instui: require("../assets/instui.png")
 };
 
 preloader(images);
@@ -63,6 +67,7 @@ export default class Presentation extends React.Component {
             Jennifer Stern
           </Heading>
           <Text textColor="secondary">Principal UI Engineer</Text>
+          <Image style={imgStyle} src={images.instui} />
         </Slide>
 
         <Slide transition={["zoom", "fade"]}>
@@ -72,121 +77,134 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["zoom", "fade"]}>
-          <Heading size={1} fit lineHeight={1} textColor="secondary">
+          <Heading size={1} lineHeight={1} textColor="secondary">
             What?
           </Heading>
+          <Appear>
+            <BlockQuote>
+              <Quote textSize={48} bold={false} textColor="secondary">
+                &ldquo;A <b>system</b> is a set of interconnected parts that form a unified whole.&rdquo;
+              </Quote>
+            </BlockQuote>
+          </Appear>
         </Slide>
-        <Slide>
-          <BlockQuote>
-            <Quote textSize={48} bold={false} textColor="secondary">
-              &ldquo;...a library of visual style and components
-              documented and released as reusable code for developers &amp; tools
-              for designers.&rdquo;
-            </Quote>
-            <Cite>Nathan Curtis</Cite>
-          </BlockQuote>
-        </Slide>
-        <Slide>
-          <BlockQuote>
-            <Quote textSize={48} bold={false} textColor="secondary">
-              &ldquo;A system is a set of interconnected parts that form a unified whole.&rdquo;
-            </Quote>
-          </BlockQuote>
+
+
+        <Slide transition={["zoom", "fade"]}>
+          <Heading size={1} fit lineHeight={1} textColor="secondary">
+            Parts of a Design System
+          </Heading>
+          <Text textColor="secondary">
+            <Appear><span>Resources</span></Appear>
+            <Appear><span>, Tooling</span></Appear>
+            <Appear><span>, &amp; Processes</span></Appear>
+          </Text>
         </Slide>
         <Slide>
           <Heading size={1} lineHeight={1} textColor="secondary">
-            Parts
+            Resources
           </Heading>
-          <List textColor="secondary">
-            <ListItem>
-              Themes/Tokens
-            </ListItem>
-            <ListItem>
-              Component Library
-            </ListItem>
-            <ListItem>
-              Living Style Guide
-            </ListItem>
-            <ListItem>
-              A Library of Sketch Symbols
-            </ListItem>
-            <ListItem>
-              Documentation
-            </ListItem>
-          </List>
+          <Text textColor="secondary">
+            <Appear><span>Themes</span></Appear>
+            <Appear><span>, Component Library</span></Appear>
+            <Appear><span>, Living Style Guide</span></Appear>
+            <Appear><span>, Sketch Symbol Library</span></Appear>
+            <Appear><span>, Documentation</span></Appear>
+          </Text>
+          <Notes>
+            - TODO: add screenshots/examples
+            - shared language
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={1} lineHeight={1} textColor="secondary">
-            Products
+            Tooling
           </Heading>
-          <List textColor="secondary">
-            <ListItem>
-              Canvas, Quizzes, Gauge, Arc
-            </ListItem>
-            <ListItem>
-              Design system parts as a product
-            </ListItem>
-          </List>
+          <Text textColor="secondary">
+            <Appear><span>Theme System</span></Appear>
+            <Appear><span>, A11y &amp; Visual Testing Utilities</span></Appear>
+            <Appear><span>, Sketch app plugins</span></Appear>
+            <Appear><span>, Prototyping tools</span></Appear>
+          </Text>
+        </Slide>
+        <Slide>
+          <Heading size={1} lineHeight={1} textColor="secondary">
+            Design + Technology = <Appear><span style={{ color: "red" }}>♥</span></Appear>
+          </Heading>
+          <Notes>
+            - encourage tighter integration between design and technology
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={1} lineHeight={1} textColor="secondary">
             Process
           </Heading>
-          <Text textColor="secondary">
-            A community of collaborative, interconnected people
-          </Text>
+          <Appear>
+            <Text textColor="secondary">
+              A community of collaborative, interconnected people
+            </Text>
+          </Appear>
+          <Notes>
+            - multi-disciplinary, across the organization
+            - product, design, engineering
+          </Notes>
         </Slide>
-
-
-        <Slide transition={["zoom", "fade"]} bgColor="primary">
+        <Slide transition={["zoom", "fade"]}>
           <Heading size={1} fit lineHeight={1} textColor="secondary">
-            Who?
+            Design at Scale
           </Heading>
         </Slide>
-        <Slide>
-          <BlockQuote>
-            <Quote textSize={48} bold={false} textColor="secondary">
-              &ldquo;A design system is adopted by and supported for
-              other teams making experiences. These teams use it to develop
-              and ship features more efficiently to form a more cohesive
-              customer journey.&rdquo;
-            </Quote>
-            <Cite>Nathan Curtis</Cite>
-          </BlockQuote>
-        </Slide>
-        <Slide>
-          <BlockQuote>
-            <Quote textSize={48} bold={false} textColor="secondary">
-              &ldquo;A design system is made by an individual, team,
-              and/or community.&rdquo;
-            </Quote>
-            <Cite>Nathan Curtis</Cite>
-          </BlockQuote>
-        </Slide>
-        <Slide>
+
+        <Slide transition={["zoom", "fade"]}>
           <Heading size={1} lineHeight={1} textColor="secondary">
-            ..for developers & designers
+            Who?<Appear><span>&nbsp;Product, Design &amp; Engineering</span></Appear>
           </Heading>
+          <Notes>
+            - who is the design system for?
+            - who builds and maintains the design system?
+            - shared responsibility and ownership
+          </Notes>
+        </Slide>
+        <Slide>
+          <Image style={imgStyle} src={images.stools} />
+        </Slide>
+        <Slide>
+          <Image style={imgStyle} src={images.wobble} />
+        </Slide>
+        <Slide>
+          <Heading size={1} fit lineHeight={1} textColor="secondary">
+            Design Ops?
+          </Heading>
+        </Slide>
+        <Slide>
+          <Image style={imgStyle} src={images.radar} />
+        </Slide>
+        <Slide>
+          <Heading><s>Dev</s> Design Ops Principles</Heading>
+          <Text textColor="secondary">
+            <Appear><span>Holistic systems thinking</span></Appear>
+            <Appear><span>, Rapid feedback</span></Appear>
+            <Appear><span>, Automation</span></Appear>
+            <Appear><span>, Break down silos</span></Appear>
+          </Text>
+          <Notes>
+            - applying dev ops principles to design at scale
+            - enable experimentation and learning
+            - everbody owns production => everbody owns design
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={1} lineHeight={1} textColor="secondary">
             UI Dev Team
           </Heading>
-          <List textColor="secondary">
-            <ListItem>
-              #instui on Slack
-            </ListItem>
-            <ListItem>
-              Front end developers/designers with CSS and JS expertise
-            </ListItem>
-            <ListItem>
-              Work closely with product designers and engineers to
-              support front end development for features
-            </ListItem>
-            <ListItem>
-              Build and support design system tools
-            </ListItem>
-          </List>
+          <Image style={imgStyle} src={images.team} />
+          <Notes>
+            - TODO: add pictures
+            - Front end developers/designers with CSS and JS expertise
+            - Work closely with product designers and engineers to
+              support front end development for feature development
+            - Build and support design system tools (Infrastructure)
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={1} lineHeight={1} textColor="secondary">
@@ -201,178 +219,133 @@ export default class Presentation extends React.Component {
           <Image style={imgStyle} src={images.federated} />
         </Slide>
 
-
         <Slide transition={["zoom", "fade"]} bgColor="primary">
-          <Heading size={1} fit lineHeight={1} textColor="secondary">
+          <Heading size={1} lineHeight={1} textColor="secondary">
             Why?
           </Heading>
         </Slide>
         <Slide>
           <Heading size={1} lineHeight={1} textColor="secondary">
-            Cohesion
+            Collaboration &amp; Alignment
           </Heading>
-          <Text textColor="secondary">
-            across applications, platforms and products
-          </Text>
-        </Slide>
-        <Slide>
-          <Image style={imgStyle} src={images.buttons} />
+          <Appear>
+            <Text textColor="secondary">
+              Across teams, disciplines, &amp; products
+            </Text>
+          </Appear>
+          <Notes>
+            - Prevent information silos
+            - Reduce the knowledge gap between design &amp; development
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={1} lineHeight={1} textColor="secondary">
-            Collaboration &amp; Alignment
+            <s>Consistency</s> Cohesion
           </Heading>
-          <Text textColor="secondary">
-            across teams and disciplines
-          </Text>
-        </Slide>
-        <Slide>
-          <List textColor="secondary">
-            <ListItem>
-              Reduce the knowledge gap between design and development
-            </ListItem>
-            <ListItem>
-              Help prevent information silos in feature teams and products
-            </ListItem>
-          </List>
+          <Appear>
+            <Text textColor="secondary">
+              Across applications, platforms and products
+            </Text>
+          </Appear>
+          <Notes>
+            - vs consistency
+            - patterns and components are not fixed, but are constantly changing, evolving based on
+              user feedback
+            - note platforms, native apps too!
+            - TODO: add example here
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={1} lineHeight={1} textColor="secondary">
             Efficiency
           </Heading>
-        </Slide>
-        <Slide>
-          <Heading size={1} lineHeight={1} textColor="secondary">
-            Stop re-inventing the wheel
-          </Heading>
-        </Slide>
-        <Slide>
-          <List textColor="secondary">
-            <ListItem>
-              Designers can stop spending time on minute details and
-              focus on the larger things like overall UX and
-              information architecture of the feature.
-            </ListItem>
-            <ListItem>
-              Encourages code re-use. Developers can take advantage of
-              A11y support, etc. in pre-built components and focus on the
-              larger feature specific implementation details.
-            </ListItem>
-          </List>
-        </Slide>
-        <Slide>
-          <Heading size={1} lineHeight={1} textColor="secondary">
-            Faster feedback loops
-          </Heading>
-        </Slide>
-        <Slide>
-          <List textColor="secondary">
-            <ListItem>
-              Makes it easier to build more functional POCs
-              with actual production-ready code.
-            </ListItem>
-            <ListItem>
-              Encourages breaking up a design into smaller, easier to
-              digest components.
-            </ListItem>
-          </List>
-        </Slide>
-        <Slide>
-          <Heading size={1} lineHeight={1} textColor="secondary">
-            Reduce Maintenance Costs
-          </Heading>
-        </Slide>
-        <Slide>
-          <List textColor="secondary">
-            <ListItem>
-              More easily roll out global design changes
-            </ListItem>
-            <ListItem>
-              i18n/RTL languages support
-            </ListItem>
-            <ListItem>
-              Responsive/touch device support
-            </ListItem>
-            <ListItem>
-              Add themes for color blind users
-            </ListItem>
-            <ListItem>
-              Branding changes
-            </ListItem>
-          </List>
-        </Slide>
-        <Slide>
-          <Heading size={1} lineHeight={1} textColor="secondary">
-            Provide Trusted Resources
-          </Heading>
-        </Slide>
-        <Slide>
-          <List textColor="secondary">
-            <ListItem>
-              Centralized documentation (single source of truth)
-            </ListItem>
-            <ListItem>
-              Shared language
-            </ListItem>
-          </List>
-        </Slide>
+          <Text textColor="secondary">
+            <Appear><span>Speed through reusability</span></Appear>
+            <Appear><span>, Faster feedback loops</span></Appear>
+          </Text>
+          <Notes>
+            - At the expense of creativity? Just like dev ops is not eliminating operations...
+            - Designers can focus on the larger things like overall UX and
+            information architecture of the feature.
+            - Encourages code re-use. Developers can take advantage of
+            A11y support, etc. in pre-built components and focus on the
+            larger feature specific implementation details.
 
+            - Reduce bottlenecks in design and/or UX debt after launch
+            - Build more functional POCs with actual production-ready code.
+            - Encourages breaking up designs into smaller, easier to digest components
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={1} lineHeight={1} textColor="secondary">
+            Trusted Resources
+          </Heading>
+          <Appear>
+            <Text textColor="secondary">
+              Centralized documentation
+            </Text>
+          </Appear>
+          <Notes>
+            - single source of truth
+            - shared language
+          </Notes>
+        </Slide>
 
         <Slide transition={["zoom", "fade"]} bgColor="primary">
-          <Heading size={1} fit lineHeight={1} textColor="secondary">
+          <Heading size={1} lineHeight={1} textColor="secondary">
             When?
           </Heading>
+          <Appear>
+            <Heading size={1} lineHeight={1} textColor="secondary">
+              Now!
+            </Heading>
+          </Appear>
         </Slide>
-        <Slide transition={["zoom", "fade"]} bgColor="primary">
+        <Slide bgColor="primary">
+          <Heading size={1} lineHeight={1} textColor="secondary">
+            In production
+          </Heading>
+          <Appear>
+            <Text textColor="secondary">
+              in Canvas, Quizzes, Gauge and Arc
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
           <Heading size={1} fit lineHeight={1} textColor="secondary">
-            Now!
+            43 Contributors
           </Heading>
-          <Text textColor="secondary">after 2 years as a grassroots project</Text>
+          <Appear>
+            <Text textColor="secondary">
+             Across 10 teams
+            </Text>
+          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} lineHeight={1} textColor="secondary">
-            Currently in production
+            What&rsquo;s next?
           </Heading>
-          <Text textColor="secondary">in Canvas,
-          Quizzes, Gauge and Arc</Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Heading size={1} lineHeight={1} textColor="secondary">
-            What's next?
-          </Heading>
-          <List textColor="secondary">
-            <ListItem>
-              Design tools (Sketch app integration)
-            </ListItem>
-            <ListItem>
-              Pattern documentation
-            </ListItem>
-            <ListItem>
-              Process improvements
-            </ListItem>
-          </List>
+          <Text textColor="secondary">
+            <Appear><span>Sketch app integration</span></Appear>
+            <Appear><span>, Pattern documentation</span></Appear>
+            <Appear><span>, Testing Utilities</span></Appear>
+          </Text>
+          <Notes>
+            - tools for designers
+            - documentation and process improvements
+            - testing (visual regression, integration test helpers)
+          </Notes>
         </Slide>
 
         <Slide transition={["zoom", "fade"]} bgColor="primary">
-          <Heading size={1} fit lineHeight={1} textColor="secondary">
+          <Heading size={1} lineHeight={1} textColor="secondary">
             Where?
           </Heading>
-        </Slide>
-        <Slide bgColor="primary">
-          <List>
-            <ListItem>
-              Slack: #instui, #design-systems
-            </ListItem>
-            <ListItem>
-              https://instructure.github.io/instructure-ui/
-            </ListItem>
-          </List>
-        </Slide>
-
-        <Slide transition={["zoom", "fade"]} bgColor="primary">
-          <Heading size={1} fit lineHeight={1} textColor="secondary">
-            Thank You!
-          </Heading>
+          <Text textColor="secondary">
+            <Appear><p>Slack: #instui, #design-systems</p></Appear>
+            <Appear><p>https://instructure.github.io/instructure-ui/</p></Appear>
+            <Appear><p>gerrit:instructure-ui</p></Appear>
+          </Text>
         </Slide>
       </Deck>
     );
