@@ -252,7 +252,6 @@ export default class Presentation extends React.Component {
             - patterns and components are not fixed, but are constantly changing, evolving based on
               user feedback
             - note platforms, native apps too!
-            - TODO: add example here
           </Notes>
         </Slide>
         <Slide>
@@ -264,9 +263,6 @@ export default class Presentation extends React.Component {
             <Appear><span>, Faster feedback loops</span></Appear>
           </Text>
           <Notes>
-            - At the expense of creativity? Just like dev ops is not eliminating operations...
-            - Designers can focus on the larger things like overall UX and
-            information architecture of the feature.
             - Encourages code re-use. Developers can take advantage of
             A11y support, etc. in pre-built components and focus on the
             larger feature specific implementation details.
@@ -274,6 +270,10 @@ export default class Presentation extends React.Component {
             - Reduce bottlenecks in design and/or UX debt after launch
             - Build more functional POCs with actual production-ready code.
             - Encourages breaking up designs into smaller, easier to digest components
+
+            - At the expense of creativity? Just like dev ops is not eliminating operations...
+            - Designers can focus on the larger things like overall UX and
+            information architecture of the feature.
           </Notes>
         </Slide>
         <Slide>
@@ -345,6 +345,7 @@ export default class Presentation extends React.Component {
             <Appear><p>Slack: #instui, #design-systems</p></Appear>
             <Appear><p>https://instructure.github.io/instructure-ui/</p></Appear>
             <Appear><p>gerrit:instructure-ui</p></Appear>
+            <Appear><p>gerrit:bridge-ui-components</p></Appear>
           </Text>
         </Slide>
       </Deck>
